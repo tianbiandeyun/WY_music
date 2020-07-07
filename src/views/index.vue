@@ -13,6 +13,6 @@
 </script>
 <style lang="less" scoped>
     .index {
-        color: @default_color;
+        color: @default-font-color-title;
     }
 </style>
