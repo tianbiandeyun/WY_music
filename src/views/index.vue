@@ -5,10 +5,14 @@
 </template>
 
 <script>
+    import config from '../unit/config'
 
     export default {
         name: 'index',
-        components: {}
+        components: {},
+        created() {
+            console.log(config.request_url)
+        }
     }
 </script>
 <style lang="less" scoped>
