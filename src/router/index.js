@@ -8,7 +8,12 @@ const routes = [
     {
         path: '/',
         name: 'Index',
-        component: index
+        components: {
+            // search 和 footer 固定的和头尾
+            default: index,
+            search: () => import('../components/WY_search/wy_search.vue'),
+            footer: () => import('../components/WY_footer/wy_footer.vue')
+        }
     }
 ];
 
