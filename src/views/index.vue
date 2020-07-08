@@ -14,7 +14,11 @@
         components: {wy_swiper},
         created() {
             this.$store.dispatch("_getBanner", {
-                im: this.$config.request_face.banner
+                im: this.$config.request_face.banner,
+                params: {
+                    a: 1,
+                    b: '33'
+                }
             })
         }
     }
