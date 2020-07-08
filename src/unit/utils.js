@@ -3,8 +3,7 @@ export default {
 
         let baseUrl;
         console.log(url);
-        console.log(fps)
-
+        console.log(fps);
 
         return baseUrl;
     }
