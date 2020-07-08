@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import request from 'request'
+import request from './request'
 
 Vue.use(Vuex);
 

@@ -5,10 +5,13 @@ import store from './store'
 import 'normalize.css'
 import 'lib-flexible'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+import custom from "./unit/custom";
+
+Vue.use(custom);
 
 new Vue({
     router,
     store,
     render: h => h(App)
-}).$mount('#app')
+}).$mount('#app');
