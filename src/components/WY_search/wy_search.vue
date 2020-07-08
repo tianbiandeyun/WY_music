@@ -12,7 +12,8 @@
 
 <style lang="less" scoped>
     .search-container {
+        font-size: @default-font-size-16;
         background-color: #2b85e4;
-        .default-padding-20-40();
+        .default-padding-10-20();
     }
 </style>

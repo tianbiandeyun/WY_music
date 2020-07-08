@@ -12,8 +12,9 @@
 
 <style lang="less" scoped>
     .footer-container {
+        font-size: @default-font-size-16;
         background-color: #19be6b;
-        .default-padding-20-40();
+        .default-padding-10-20();
         position: fixed;
         bottom: 0;
         left: 0;
