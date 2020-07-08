@@ -19,7 +19,9 @@
         props: {
             data: {
                 type: Array,
-                default: [1, 2, 3, 4]
+                default: () => {
+                    return [11, 22, 33, 44, 55]
+                }
             }
         },
         data() {
