@@ -1,9 +1,12 @@
 <template>
     <section class="index">
+        <!--loading-->
+        <loading :loading-show="show"></loading>
 
+        <!--轮播图-->
         <wy_swiper :data="banner"></wy_swiper>
 
-        <loading :loading-show="show"></loading>
+        
 
     </section>
 </template>
