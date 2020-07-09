@@ -1,6 +1,6 @@
 <template>
     <section class="footer-container">
-        footer-container
+        底部切换栏目
     </section>
 </template>
 

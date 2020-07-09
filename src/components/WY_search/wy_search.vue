@@ -1,6 +1,6 @@
 <template>
     <section class="search-container">
-        search-container
+        搜索部分
     </section>
 </template>
 
