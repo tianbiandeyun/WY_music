@@ -1,7 +1,7 @@
 <template>
     <section class="index">
 
-        <wy_swiper></wy_swiper>
+        <wy_swiper :data="banner"></wy_swiper>
 
         <loading :loading-show="show"></loading>
 
@@ -17,7 +17,8 @@
         components: {wy_swiper},
         data() {
             return {
-                show: false
+                show: false,
+                banner: ['a', 'b']
             }
         },
         created() {
@@ -27,10 +28,13 @@
         methods: {
             request_index() {
                 this.$store.dispatch("_getBanner", {
-                    im: this.$config.request_face.banner
+                    im: this.$config.request_face.banner,
+                    parames: {
+                        type: 2
+                    }
                 }).then(res => {
+                    this.banner = res.banners;
                     this.show = false;
-                    console.log(res)
                 })
             }
         }

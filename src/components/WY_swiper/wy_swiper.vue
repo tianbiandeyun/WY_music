@@ -2,7 +2,7 @@
     <section class="swiper-wy-container">
         <swiper ref="mySwiper" :options="swiperOptions">
             <swiper-slide v-for="(item,index) in data" :key="index">
-                {{item}}
+                <img :src="item.pic" alt="">
             </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>
         </swiper>
@@ -46,5 +46,9 @@
         line-height: @default-swiper-height;
         text-align: center;
         background-color: #c5c8ce;
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
 </style>
