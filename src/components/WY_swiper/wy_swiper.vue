@@ -53,15 +53,14 @@
         height: @default-swiper-height;
         line-height: @default-swiper-height;
         text-align: center;
-        background-color: #c5c8ce;
         img {
-            width: 100%;
-            height: 100%;
+            width: 92%;
+            height: 88%;
         }
     }
 
     .swiper-container {
         --swiper-theme-color: #ff6600;
-        --swiper-pagination-color: #fff; /* 两种都可以 */
+        --swiper-pagination-color: #000; /* 两种都可以 */
     }
 </style>

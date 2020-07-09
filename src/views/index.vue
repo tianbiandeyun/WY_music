@@ -1,12 +1,12 @@
 <template>
     <section class="index">
+
         <!--loading-->
         <loading :loading-show="show"></loading>
 
         <!--轮播图-->
         <wy_swiper :data="banner"></wy_swiper>
 
-        
 
     </section>
 </template>
@@ -37,7 +37,7 @@
                     }
                 }).then(res => {
                     this.banner = res.banners;
-                    this.show = false;
+                    this.show = false
                 })
             }
         }
