@@ -14,12 +14,30 @@ const routes = [
             search: () => import('../components/WY_search/wy_search.vue'),
             footer: () => import('../components/WY_footer/wy_footer.vue')
         }
+    },
+    {
+        path: '/login',
+        name: 'Login',
+        component: () => import('../views/login.vue')
     }
 ];
 
 const router = new VueRouter({
     mode: 'history',
     routes
+});
+
+const flag = false;
+router.beforeEach((to, from, next) => {
+    if (flag) {
+        next()
+    } else {
+        if (to.name === 'Login') {
+            next()
+        } else {
+            next('/login')
+        }
+    }
 });
 
 export default router
