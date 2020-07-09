@@ -74,21 +74,24 @@
 
 <style lang="less" scoped>
     .login-container {
-        background-color: #2db7f5;
+        position: relative;
         height: 100%;
-        overflow: hidden;
-    }
 
-    .login-message {
-        border: 1px solid black;
-    }
+        .login-message {
+            .default-box-sizing;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 200px;
+        }
 
-    .button-container {
-        .default-padding-10-20();
-        .default-box-sizing;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
+        .button-container {
+            .default-padding-10-20();
+            .default-box-sizing;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
     }
 </style>
