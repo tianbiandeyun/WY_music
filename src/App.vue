@@ -12,5 +12,6 @@
         padding: 0;
         list-style: none;
         .default-box-sizing;
+        outline: none;
     }
 </style>
