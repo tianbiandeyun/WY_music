@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import 'normalize.css'
 import 'lib-flexible'
+import './assets/css/rest.css'
 
 Vue.config.productionTip = false;
 import custom from "./unit/custom";

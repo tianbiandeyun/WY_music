@@ -73,10 +73,14 @@
 </script>
 
 <style lang="less" scoped>
+    .login-container {
+        background-color: #2db7f5;
+        height: 100%;
+        overflow: hidden;
+    }
 
     .login-message {
         border: 1px solid black;
-
     }
 
     .button-container {
