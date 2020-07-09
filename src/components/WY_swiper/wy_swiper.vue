@@ -2,7 +2,7 @@
     <section class="swiper-wy-container">
         <swiper ref="mySwiper" :options="swiperOptions">
             <swiper-slide v-for="(item,index) in data" :key="index">
-                {{item}}
+                <img :src="item.pic" alt="" @click="getBanner(item.bannerId,item.song.al.id)">
             </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>
         </swiper>
@@ -27,13 +27,21 @@
         data() {
             return {
                 swiperOptions: {
+                    effect: 'coverflow',
                     autoplay: true,
                     loop: true,
+                    disableOnInteraction: false,
                     pagination: {
                         el: '.swiper-pagination',
                         dynamicBullets: true
                     },
                 }
+            }
+        },
+        methods: {
+            getBanner(bannerId, songId) {
+                console.log(bannerId)
+                console.log(songId)
             }
         }
     }
@@ -45,6 +53,14 @@
         height: @default-swiper-height;
         line-height: @default-swiper-height;
         text-align: center;
-        background-color: #c5c8ce;
+        img {
+            width: 92%;
+            height: 88%;
+        }
+    }
+
+    .swiper-container {
+        --swiper-theme-color: #ff6600;
+        --swiper-pagination-color: #000; /* 两种都可以 */
     }
 </style>

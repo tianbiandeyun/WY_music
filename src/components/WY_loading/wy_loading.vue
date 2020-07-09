@@ -1,6 +1,6 @@
 <template>
     <section class="loading-container">
-        <Overlay :show="loadingShow">
+        <Overlay :show="loadingShow" z-index="2">
             <div class="loading-wrapper" @click="close">
                 <Loading type="spinner" color="#fff" vertical>{{loadingMsg}}</Loading>
             </div>

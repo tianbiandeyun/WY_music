@@ -12,5 +12,7 @@
         padding: 0;
         list-style: none;
         .default-box-sizing;
+        outline: none;
+        background-color: @default-app-color-background;
     }
 </style>

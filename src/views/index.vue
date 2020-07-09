@@ -1,9 +1,12 @@
 <template>
     <section class="index">
 
-        <wy_swiper></wy_swiper>
-
+        <!--loading-->
         <loading :loading-show="show"></loading>
+
+        <!--轮播图-->
+        <wy_swiper :data="banner"></wy_swiper>
+
 
     </section>
 </template>
@@ -17,7 +20,8 @@
         components: {wy_swiper},
         data() {
             return {
-                show: false
+                show: false,
+                banner: ['a', 'b']
             }
         },
         created() {
@@ -27,10 +31,13 @@
         methods: {
             request_index() {
                 this.$store.dispatch("_getBanner", {
-                    im: this.$config.request_face.banner
+                    im: this.$config.request_face.banner,
+                    parames: {
+                        type: 2
+                    }
                 }).then(res => {
-                    this.show = false;
-                    console.log(res)
+                    this.banner = res.banners;
+                    this.show = false
                 })
             }
         }

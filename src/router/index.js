@@ -7,6 +7,11 @@ Vue.use(VueRouter);
 const routes = [
     {
         path: '/',
+        name: 'Login',
+        component: () => import('../views/login.vue')
+    },
+    {
+        path: '/index',
         name: 'Index',
         components: {
             // search 和 footer 固定的和头尾
@@ -20,6 +25,21 @@ const routes = [
 const router = new VueRouter({
     mode: 'history',
     routes
+});
+
+// const flag = false;
+router.beforeEach((to, from, next) => {
+    console.log(to);
+    next()
+    // if (flag) {
+    //     next()
+    // } else {
+    //     if (to.name === 'Login') {
+    //         next()
+    //     } else {
+    //         next('/login')
+    //     }
+    // }
 });
 
 export default router
