@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "babel-jest": "^26.1.0",
     "core-js": "^3.6.5",
     "lib-flexible": "^0.3.2",
     "normalize.css": "^8.0.1",
@@ -41,6 +42,9 @@
   ],
   "jest": {
     "preset": "@vue/cli-plugin-unit-jest",
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+    },
     "collectCoverage": true,
     "collectCoverageFrom": [
       "**/*.{js,vue}",
