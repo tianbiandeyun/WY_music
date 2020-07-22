@@ -9,6 +9,8 @@
             <Button round block type="primary" size="small" @click="submit">提交</Button>
         </div>
 
+        <p>{{new_size}}</p>
+
     </section>
 </template>
 
@@ -25,12 +27,13 @@
                 code: '',
                 nickname: '',
                 code_msg: '获取验证码',
-                timer: null
+                timer: null,
+                size: '123'
             };
         },
         methods: {
             submit() {
-
+                this.size += '4344'
             },
             getCode() {
                 const TIME_COUNT = 3;
@@ -48,6 +51,11 @@
                 }
             }
         },
+        computed: {
+            new_size() {
+                return this.size
+            }
+        }
     }
 </script>
 
