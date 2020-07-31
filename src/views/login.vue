@@ -16,6 +16,7 @@
 
 <script>
     import {Button} from 'vant';
+    import '../../node_modules/animate.css/animate.css'
 
     export default {
         name: "login",
@@ -49,6 +50,9 @@
                         }
                     }, 1000)
                 }
+            },
+            go() {
+                this.visible = !this.visible
             }
         },
         computed: {
@@ -60,6 +64,7 @@
 </script>
 
 <style lang="less" scoped>
+
     .login-container {
         position: relative;
         height: 100%;

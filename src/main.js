@@ -11,6 +11,10 @@ import custom from "./unit/custom";
 
 Vue.use(custom);
 
+import animate from 'animate.css'
+
+Vue.use(animate);
+
 new Vue({
     router,
     store,
