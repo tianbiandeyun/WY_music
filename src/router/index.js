@@ -19,6 +19,11 @@ const routes = [
             search: () => import('../components/WY_search/wy_search.vue'),
             footer: () => import('../components/WY_footer/wy_footer.vue')
         }
+    },
+    {
+        path: '/test',
+        name: 'Test',
+        component: () => import('../views/test.vue')
     }
 ];
 
@@ -27,19 +32,19 @@ const router = new VueRouter({
     routes
 });
 
-// const flag = false;
+const flag = true;
 router.beforeEach((to, from, next) => {
-    console.log(to);
-    next()
-    // if (flag) {
-    //     next()
-    // } else {
-    //     if (to.name === 'Login') {
-    //         next()
-    //     } else {
-    //         next('/login')
-    //     }
-    // }
+
+    if (flag) {
+        //继续执行正常跳转
+        if (to.name === 'Test') next('/');
+        else next()
+    } else {
+        //跳转到指定的登录页login
+        if (to.name === 'Test') next()
+        else next('/test')
+    }
+
 });
 
 export default router
