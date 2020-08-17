@@ -11,37 +11,33 @@
 
         <!--<p>{{new_size}}</p>-->
 
-
-        <div class="grid-box">
-
-            <div class="header">
-                header
-            </div>
-
-            <div class="content">
-                <div class="left-slide">left-slide</div>
-                <div class="main-content">main-content</div>
-                <div class="right-slide">right-slide</div>
-            </div>
-
-            <div class="footer">
-                footer
-            </div>
-
-        </div>
+        <Picker show-toolbar title="标题" :columns="columns" @change="onChange"/>
 
     </section>
 </template>
 
 <script>
-    import {Button} from 'vant';
+    import {Button, Picker} from 'vant';
     import '../../node_modules/animate.css/animate.css'
 
     export default {
         name: "login",
-        components: {Button},
+        components: {Button, Picker},
         data() {
             return {
+                columns: [
+                    // 第一列
+                    {
+                        values: ['周一', '周二', '周三', '周四', '周五'],
+                        defaultIndex: 2
+                    },
+                    // 第二列
+                    {
+                        values: ['上午', '下午', '晚上'],
+                        defaultIndex: 1
+                    }
+                ],
+                // ---
                 photo: '',
                 password: '',
                 code: '',
@@ -52,6 +48,9 @@
             };
         },
         methods: {
+            onChange(picker, value, index) {
+                console.log(`当前值：${value}, 当前索引：${index}`)
+            },
             submit() {
                 this.size += '4344'
             },
@@ -84,63 +83,26 @@
 
 <style lang="less" scoped>
 
-    .grid-box {
-        border: 1px solid black;
-        width: 960px;
-        height: 400px;
-        margin: 0 auto;
-        color: #000;
-        text-align: center;
-        font-size: 20px;
-        /*---*/
-        display: grid;
-        grid-template-rows: 1fr 3fr 1fr;
+    .login-container {
+        position: relative;
+        height: 100%;
 
-        .header {
-            background-color: #ff9900;
+        .login-message {
+            .default-box-sizing;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 200px;
+            border: 1px solid black;
         }
 
-        .content {
-            display: grid;
-            grid-template-columns: 100px auto 100px;
-            grid-column-gap: 20px;
-
-            .left-slide {
-                background-color: #808695;
-            }
-            .main-content {
-                background-color: #515a6e;
-            }
-            .right-slide {
-                background-color: #c5c8ce;
-            }
-        }
-
-        .footer {
-            background-color: bisque;
+        .button-container {
+            .default-padding-10-20();
+            .default-box-sizing;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
         }
     }
-
-    /*.login-container {*/
-    /*position: relative;*/
-    /*height: 100%;*/
-
-    /*.login-message {*/
-    /*//.default-box-sizing;*/
-    /*width: 100%;*/
-    /*position: absolute;*/
-    /*left: 0;*/
-    /*top: 200px;*/
-    /*border: 1px solid black;*/
-    /*}*/
-
-    /*.button-container {*/
-    /*//.default-padding-10-20();*/
-    /*//.default-box-sizing;*/
-    /*position: fixed;*/
-    /*bottom: 0;*/
-    /*left: 0;*/
-    /*width: 100%;*/
-    /*}*/
-    /*}*/
 </style>
