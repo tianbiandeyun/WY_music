@@ -2,7 +2,10 @@
     <section class="login-container">
 
         <div class="login-message">
-
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
         </div>
 
         <div class="button-container">
@@ -60,12 +63,21 @@
         height: 100%;
 
         .login-message {
-            .default-box-sizing;
-            width: 100%;
-            position: absolute;
-            left: 0;
-            top: 200px;
             border: 1px solid black;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 100px);
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+            justify-content: end;
+
+            div {
+                border: 1px solid red;
+                text-align: center;
+                line-height: 100px;
+            }
+
         }
 
         .button-container {
