@@ -32,19 +32,19 @@ const router = new VueRouter({
     routes
 });
 
-const flag = true;
-router.beforeEach((to, from, next) => {
-
-    if (flag) {
-        //继续执行正常跳转
-        if (to.name === 'Test') next('/');
-        else next()
-    } else {
-        //跳转到指定的登录页login
-        if (to.name === 'Test') next()
-        else next('/test')
-    }
-
-});
+// const flag = true;
+// router.beforeEach((to, from, next) => {
+//
+//     if (flag) {
+//         //继续执行正常跳转
+//         if (to.name === 'Test') next('/');
+//         else next()
+//     } else {
+//         //跳转到指定的登录页login
+//         if (to.name === 'Test') next()
+//         else next('/test')
+//     }
+//
+// });
 
 export default router

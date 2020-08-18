@@ -25,7 +25,7 @@
             }
         },
         created() {
-            this.show = true;
+            // this.show = true;
             this.request_index();
         },
         methods: {
