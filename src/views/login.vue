@@ -1,17 +1,13 @@
 <template>
     <section class="login-container">
 
-        <!--<div class="login-message">-->
+        <div class="login-message">
 
-        <!--</div>-->
+        </div>
 
-        <!--<div class="button-container">-->
-        <!--<Button round block type="primary" size="small" @click="submit">提交</Button>-->
-        <!--</div>-->
-
-        <!--<p>{{new_size}}</p>-->
-
-        <Picker show-toolbar title="标题" :columns="columns" @change="onChange"/>
+        <div class="button-container">
+            <Button round block type="primary" size="small" @click="submit">提交</Button>
+        </div>
 
     </section>
 </template>
@@ -25,19 +21,6 @@
         components: {Button, Picker},
         data() {
             return {
-                columns: [
-                    // 第一列
-                    {
-                        values: ['周一', '周二', '周三', '周四', '周五'],
-                        defaultIndex: 2
-                    },
-                    // 第二列
-                    {
-                        values: ['上午', '下午', '晚上'],
-                        defaultIndex: 1
-                    }
-                ],
-                // ---
                 photo: '',
                 password: '',
                 code: '',
@@ -48,9 +31,6 @@
             };
         },
         methods: {
-            onChange(picker, value, index) {
-                console.log(`当前值：${value}, 当前索引：${index}`)
-            },
             submit() {
                 this.size += '4344'
             },
@@ -68,14 +48,6 @@
                         }
                     }, 1000)
                 }
-            },
-            go() {
-                this.visible = !this.visible
-            }
-        },
-        computed: {
-            new_size() {
-                return this.size
             }
         }
     }
