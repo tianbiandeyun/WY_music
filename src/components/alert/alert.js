@@ -2,14 +2,14 @@ import Notification from './notification.js';
 
 let messageInstance;
 
-function getMessageInstance() {
-    messageInstance = messageInstance || Notification.newInstance();
+function getMessageInstance(content) {
+    messageInstance = messageInstance || Notification.newInstance(content);
     return messageInstance;
 }
 
 function notice({duration = 1.5, content = ''}) {
 
-    let instance = getMessageInstance();
+    let instance = getMessageInstance({m: content});
 
     instance.add({
         content: content,

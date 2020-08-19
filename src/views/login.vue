@@ -44,15 +44,15 @@
         },
         methods: {
             submit() {
-                // this.$Alert.info({
-                //     content: '我是提示信息'
-                // });
+                this.$Alert.info({
+                    content: '3434'
+                });
 
-                this.$Occlude.show('我是一个穿进去的');
-
-                setTimeout(() => {
-                    this.$Occlude.close()
-                }, 1000)
+                // this.$Occlude.show('我是一个穿进去的');
+                //
+                // setTimeout(() => {
+                //     this.$Occlude.close()
+                // }, 1000)
 
             },
             getCode() {

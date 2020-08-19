@@ -2,6 +2,7 @@
     <div class="alert">
         <div class="alert-main" v-for="item in notices" :key="item.name">
             <div class="alert-content">{{ item.content }}</div>
+            <p>{{m}}</p>
         </div>
     </div>
 </template>
@@ -13,6 +14,12 @@
     };
 
     export default {
+        props: {
+            m: {
+                type: String,
+                default: '我是默认值'
+            }
+        },
         data() {
             return {
                 notices: []
@@ -32,9 +39,9 @@
                 // 定时移除，单位：秒
                 const duration = notice.duration;
 
-                setTimeout(() => {
-                    this.remove(name);
-                }, duration * 1000);
+                // setTimeout(() => {
+                //     this.remove(name);
+                // }, duration * 1000);
 
             },
             remove(name) {
