@@ -19,7 +19,6 @@ function notice({duration = 1.5, content = ''}) {
 
 export default {
     info(options) {
-        console.log(options)
         return notice(options);
     }
 }

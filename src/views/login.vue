@@ -29,6 +29,8 @@
     import '../../node_modules/animate.css/animate.css'
     import occlude from '../components/occlude/occlude'
 
+    import a from '../components/alert/notification'
+
     export default {
         name: "login",
         components: {Button, Picker, Tab, Tabs, occlude},
@@ -42,9 +44,12 @@
         },
         methods: {
             submit() {
-                this.$Alert.info({
-                    content: '我是提示信息'
-                });
+                // this.$Alert.info({
+                //     content: '我是提示信息'
+                // });
+
+                this.$Occlude.show();
+
             },
             getCode() {
                 const TIME_COUNT = 3;
