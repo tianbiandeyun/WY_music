@@ -19,16 +19,19 @@
             <Button round block type="primary" size="small" @click="submit">提交</Button>
         </div>
 
+        <occlude></occlude>
+
     </section>
 </template>
 
 <script>
     import {Button, Picker, Tab, Tabs} from 'vant';
     import '../../node_modules/animate.css/animate.css'
+    import occlude from '../components/occlude/occlude'
 
     export default {
         name: "login",
-        components: {Button, Picker, Tab, Tabs},
+        components: {Button, Picker, Tab, Tabs, occlude},
         data() {
             return {
                 active: 2,
