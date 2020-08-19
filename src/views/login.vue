@@ -8,11 +8,11 @@
         <!--<div>4</div>-->
         <!--</div>-->
 
-        <div class="vant-tabs">
-            <Tabs v-model="active">
-                <Tab v-for="index in 4" :title="'标签 ' + index">内容 1</Tab>
-            </Tabs>
-        </div>
+        <!--<div class="vant-tabs">-->
+        <!--<Tabs v-model="active">-->
+        <!--<Tab v-for="index in 4" :title="'标签 ' + index">内容 1</Tab>-->
+        <!--</Tabs>-->
+        <!--</div>-->
 
         <!--<div class="button-container">-->
         <!--<Button round block type="primary" size="small" @click="submit">提交</Button>-->

@@ -30,7 +30,7 @@
         name: "tabs",
         data() {
             return {
-                size: 4,
+                size: 5,
                 item_index: 0
             }
         },
@@ -49,7 +49,7 @@
 
 <style lang="less" scoped>
 
-    @nav-item-width: 100% / 4px;
+    @nav-item-width: 100% / 5px;
     @nav-item-height: 40px;
 
     .tabs-container {
