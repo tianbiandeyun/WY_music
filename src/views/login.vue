@@ -8,6 +8,13 @@
             <div>4</div>
         </div>
 
+        <Tabs v-model="active">
+            <Tab title="标签 1">内容 1</Tab>
+            <Tab title="标签 2">内容 2</Tab>
+            <Tab title="标签 3">内容 3</Tab>
+            <Tab title="标签 4">内容 4</Tab>
+        </Tabs>
+
         <div class="button-container">
             <Button round block type="primary" size="small" @click="submit">提交</Button>
         </div>
@@ -16,14 +23,16 @@
 </template>
 
 <script>
-    import {Button, Picker} from 'vant';
+    import {Button, Picker, Tab, Tabs} from 'vant';
     import '../../node_modules/animate.css/animate.css'
 
     export default {
         name: "login",
-        components: {Button, Picker},
+        components: {Button, Picker, Tab, Tabs},
         data() {
             return {
+                active: 2,
+                // ---
                 photo: '',
                 password: '',
                 code: '',
