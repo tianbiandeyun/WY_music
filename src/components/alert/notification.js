@@ -4,6 +4,7 @@ import Vue from 'vue';
 Alert.newInstance = properties => {
     const props = properties || {};
 
+    // 实列化
     const Instance = new Vue({
         data: props,
         render(h) {
@@ -13,6 +14,7 @@ Alert.newInstance = properties => {
         }
     });
 
+    // 将实列化的 Alert 添加到 body 中
     const component = Instance.$mount();
     document.body.appendChild(component.$el);
 
