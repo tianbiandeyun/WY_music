@@ -1,6 +1,5 @@
 import Occlude from './occlude.vue'
 import Vue from 'vue'
-import Notification from "../alert/notification";
 
 // Occlude 是一个对象，往这个对象里添加一个方法
 Occlude.newInstance = (props) => {
@@ -34,6 +33,8 @@ Occlude.newInstance = (props) => {
 
 };
 
+// getMessageInstance 函数用来获取实例，它不会重复创建，如果 messageInstance 已经存在，就直接返回了，
+// 只在第一次调用 Notification 的 newInstance 时来创建实例。
 let messageInstance;
 
 let getMessageInstance = (props) => {
