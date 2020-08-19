@@ -9,7 +9,7 @@
                 {{item}}
             </div>
             <div class="tabs-nav-item-active"
-                 :style="{transitionDuration:`${s}s`,width:`${navItemWidth}px`,transform:`translateX(${navItemWidth*item_index}px)`}"
+                 :style="{transitionDuration:`.3s`,width:`${navItemWidth}px`,transform:`translateX(${navItemWidth*item_index}px)`}"
             ></div>
         </div>
 
@@ -30,8 +30,6 @@
         name: "tabs",
         data() {
             return {
-                w: 20,
-                s: .3,
                 size: 4,
                 item_index: 0
             }
