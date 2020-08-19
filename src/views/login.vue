@@ -8,18 +8,17 @@
             <div>4</div>
         </div>
 
-        <Tabs v-model="active">
-            <Tab title="标签 1">内容 1</Tab>
-            <Tab title="标签 2">内容 2</Tab>
-            <Tab title="标签 3">内容 3</Tab>
-            <Tab title="标签 4">内容 4</Tab>
-        </Tabs>
+        <div class="vant-tabs">
+            <Tabs v-model="active">
+                <Tab v-for="index in 3" :title="'标签 ' + index">内容 1</Tab>
+            </Tabs>
+        </div>
 
         <div class="button-container">
             <Button round block type="primary" size="small" @click="submit">提交</Button>
         </div>
 
-        <!--<occlude></occlude>-->
+        <tabs></tabs>
 
     </section>
 </template>
@@ -27,16 +26,14 @@
 <script>
     import {Button, Picker, Tab, Tabs} from 'vant';
     import '../../node_modules/animate.css/animate.css'
-    import occlude from '../components/occlude/occlude'
-
-    import a from '../components/alert/notification'
+    import tabs from '../components/tabs/tabs'
 
     export default {
         name: "login",
-        components: {Button, Picker, Tab, Tabs, occlude},
+        components: {Button, Picker, Tab, Tabs, tabs},
         data() {
             return {
-                active: 2,
+                active: 0,
                 // ---
                 code_msg: '获取验证码',
                 timer: null
@@ -79,6 +76,13 @@
     .login-container {
         position: relative;
         height: 100%;
+
+        .vant-tabs {
+
+            .van-tab__pane {
+                border: 1px solid red;
+            }
+        }
 
         .login-message {
             border: 1px solid black;
