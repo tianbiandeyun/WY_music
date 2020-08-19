@@ -7,20 +7,15 @@
 <script>
     export default {
         name: "occlude",
-        props: {
-            message: {
-                type: String,
-                default: '我是一个props'
-            }
-
-        },
         data() {
             return {
-                show: false
+                show: false,
+                message: '我是一个props'
             }
         },
         methods: {
-            showOcclude() {
+            showOcclude(res) {
+                this.message = res;
                 this.show = true;
             },
             closeOcclude() {

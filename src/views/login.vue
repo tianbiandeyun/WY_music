@@ -48,7 +48,7 @@
                 //     content: '我是提示信息'
                 // });
 
-                this.$Occlude.show();
+                this.$Occlude.show('我是一个穿进去的');
 
                 setTimeout(() => {
                     this.$Occlude.close()

@@ -4,14 +4,10 @@ import Vue from 'vue'
 // Occlude 是一个对象，往这个对象里添加一个方法
 Occlude.newInstance = () => {
 
-    let _props = {};
-
     // 实列化
     const Instance = new Vue({
         render(h) {
-            return h(Occlude, {
-                props: _props
-            })
+            return h(Occlude)
         }
     });
 
@@ -25,8 +21,8 @@ Occlude.newInstance = () => {
     const _occlude = Instance.$children[0];
 
     return {
-        show() {
-            _occlude.showOcclude();
+        show(res) {
+            _occlude.showOcclude(res);
         },
         close() {
             _occlude.closeOcclude();
