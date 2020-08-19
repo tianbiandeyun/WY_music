@@ -33,18 +33,15 @@
             return {
                 active: 2,
                 // ---
-                photo: '',
-                password: '',
-                code: '',
-                nickname: '',
                 code_msg: '获取验证码',
-                timer: null,
-                size: '123'
+                timer: null
             };
         },
         methods: {
             submit() {
-                this.size += '4344'
+                this.$Alert.info({
+                    content: '我是提示信息 1'
+                });
             },
             getCode() {
                 const TIME_COUNT = 3;
