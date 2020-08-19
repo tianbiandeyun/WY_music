@@ -1,22 +1,22 @@
 <template>
     <section class="login-container">
 
-        <div class="login-message">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-        </div>
+        <!--<div class="login-message">-->
+        <!--<div>1</div>-->
+        <!--<div>2</div>-->
+        <!--<div>3</div>-->
+        <!--<div>4</div>-->
+        <!--</div>-->
 
         <div class="vant-tabs">
             <Tabs v-model="active">
-                <Tab v-for="index in 3" :title="'标签 ' + index">内容 1</Tab>
+                <Tab v-for="index in 4" :title="'标签 ' + index">内容 1</Tab>
             </Tabs>
         </div>
 
-        <div class="button-container">
-            <Button round block type="primary" size="small" @click="submit">提交</Button>
-        </div>
+        <!--<div class="button-container">-->
+        <!--<Button round block type="primary" size="small" @click="submit">提交</Button>-->
+        <!--</div>-->
 
         <tabs></tabs>
 
