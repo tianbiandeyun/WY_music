@@ -44,15 +44,15 @@
         },
         methods: {
             submit() {
-                this.$Alert.info({
-                    content: '3434'
-                });
+                // this.$Alert.info({
+                //     content: '3434'
+                // });
 
-                // this.$Occlude.show('我是一个穿进去的');
-                //
-                // setTimeout(() => {
-                //     this.$Occlude.close()
-                // }, 1000)
+                this.$Occlude.show({prpos_data: '我是一个穿进去的 props'});
+
+                setTimeout(() => {
+                    this.$Occlude.close()
+                }, 3000)
 
             },
             getCode() {

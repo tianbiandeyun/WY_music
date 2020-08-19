@@ -1,16 +1,23 @@
 <template>
     <section class="occlude-container" v-if="show">
-        <p>{{message}}</p>
+        <p>我来自 data {{message}}</p>
+        <p>我来自 props {{prpos_data}}</p>
     </section>
 </template>
 
 <script>
     export default {
         name: "occlude",
+        props: {
+            prpos_data: {
+                type: String,
+                default: '我是默认props'
+            }
+        },
         data() {
             return {
                 show: false,
-                message: '我是一个props'
+                message: '我是一个data'
             }
         },
         methods: {
