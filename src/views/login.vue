@@ -19,7 +19,7 @@
             <Button round block type="primary" size="small" @click="submit">提交</Button>
         </div>
 
-        <occlude></occlude>
+        <!--<occlude></occlude>-->
 
     </section>
 </template>
