@@ -40,8 +40,9 @@
         methods: {
             submit() {
                 this.$Alert.info({
-                    content: '我是提示信息 1'
+                    content: '我是提示信息'
                 });
+                // this.$Occlude.add();
             },
             getCode() {
                 const TIME_COUNT = 3;

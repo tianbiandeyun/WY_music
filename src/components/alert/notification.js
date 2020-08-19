@@ -1,16 +1,12 @@
 import Alert from './alert.vue';
 import Vue from 'vue';
 
-Alert.newInstance = properties => {
-    const props = properties || {};
+Alert.newInstance = () => {
 
     // 实列化
     const Instance = new Vue({
-        data: props,
         render(h) {
-            return h(Alert, {
-                props: props
-            });
+            return h(Alert);
         }
     });
 
