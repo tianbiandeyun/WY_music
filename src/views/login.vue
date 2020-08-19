@@ -50,6 +50,10 @@
 
                 this.$Occlude.show();
 
+                setTimeout(() => {
+                    this.$Occlude.close()
+                }, 1000)
+
             },
             getCode() {
                 const TIME_COUNT = 3;

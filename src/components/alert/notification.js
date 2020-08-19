@@ -3,8 +3,6 @@ import Vue from 'vue';
 
 Alert.newInstance = () => {
 
-    console.log('33333')
-
     // 实列化
     const Instance = new Vue({
         render(h) {

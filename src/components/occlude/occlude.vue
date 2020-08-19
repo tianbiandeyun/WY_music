@@ -1,12 +1,19 @@
 <template>
     <section class="occlude-container" v-if="show">
-        <p>我是一个全局组件</p>
+        <p>{{message}}</p>
     </section>
 </template>
 
 <script>
     export default {
         name: "occlude",
+        props: {
+            message: {
+                type: String,
+                default: '我是一个props'
+            }
+
+        },
         data() {
             return {
                 show: false
