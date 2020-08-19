@@ -9,7 +9,7 @@
                 {{item}}
             </div>
             <div class="tabs-nav-item-active"
-                 :style="{transitionDuration:`.3s`,width:`${navItemWidth}px`,transform:`translateX(${navItemWidth*item_index}px)`}"
+                 :style="{transitionDuration:`.3s`,width:`${navItemWidth}px`,transform:`translateX(${((navItemWidth*2)*item_index)+navItemWidth / 2}px)`}"
             ></div>
         </div>
 
@@ -41,7 +41,7 @@
         },
         computed: {
             navItemWidth() {
-                return document.body.scrollWidth / this.size;
+                return document.body.scrollWidth / (this.size * 2);
             }
         }
     }
