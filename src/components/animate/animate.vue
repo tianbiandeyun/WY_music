@@ -59,7 +59,7 @@
         }
 
         .boxItemActiveYi {
-            animation: box-item-1-animation 1s;
+            animation: box-item-1-animation .3s;
             animation-fill-mode: forwards;
         }
 
@@ -96,7 +96,7 @@
         }
 
         .boxItemActiveSan {
-            animation: box-item-3-animation 1s;
+            animation: box-item-3-animation .3s;
             animation-fill-mode: forwards;
         }
 
@@ -129,9 +129,9 @@
         }
 
         .boxItemActiveSi {
-            animation: box-item-4-animation 1s;
+            animation: box-item-4-animation .3s;
             animation-fill-mode: forwards;
-            animation-delay: 1s;
+            animation-delay: .3s;
         }
 
         @-webkit-keyframes box-item-4-animation {
@@ -163,9 +163,9 @@
         }
 
         .boxItemActiveWu {
-            animation: box-item-5-animation 1s;
+            animation: box-item-5-animation .3s;
             animation-fill-mode: forwards;
-            animation-delay: 1s;
+            animation-delay: .3s;
         }
 
         @-webkit-keyframes box-item-5-animation {
@@ -197,9 +197,9 @@
         }
 
         .boxItemActiveLiu {
-            animation: box-item-6-animation 1s;
+            animation: box-item-6-animation .3s;
             animation-fill-mode: forwards;
-            animation-delay: 1s;
+            animation-delay: .3s;
         }
 
         @-webkit-keyframes box-item-6-animation {
