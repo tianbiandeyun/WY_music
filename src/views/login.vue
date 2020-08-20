@@ -19,6 +19,7 @@
         <!--</div>-->
 
         <tabs></tabs>
+        <animateContainer></animateContainer>
 
     </section>
 </template>
@@ -27,10 +28,11 @@
     import {Button, Picker, Tab, Tabs} from 'vant';
     import '../../node_modules/animate.css/animate.css'
     import tabs from '../components/tabs/tabs'
+    import animateContainer from '../components/animate/animate'
 
     export default {
         name: "login",
-        components: {Button, Picker, Tab, Tabs, tabs},
+        components: {Button, Picker, Tab, Tabs, tabs, animateContainer},
         data() {
             return {
                 active: 0,
