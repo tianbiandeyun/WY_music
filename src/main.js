@@ -15,12 +15,6 @@ import animate from 'animate.css'
 
 Vue.use(animate);
 
-import wxShare from 'hztc-wxshare'
-
-Vue.use(wxShare);
-
-import wx from 'jk-wxhandler'
-
 new Vue({
     router,
     store,

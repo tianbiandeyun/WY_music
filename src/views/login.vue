@@ -29,8 +29,6 @@
     import '../../node_modules/animate.css/animate.css'
     import tabs from '../components/tabs/tabs'
     import animateContainer from '../components/animate/animate'
-    import cel from 'cel-test'
-    import c from '../unit/cel'
 
     export default {
         name: "login",
