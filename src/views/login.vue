@@ -29,6 +29,8 @@
     import '../../node_modules/animate.css/animate.css'
     import tabs from '../components/tabs/tabs'
     import animateContainer from '../components/animate/animate'
+    import cel from 'cel-test'
+    import c from '../unit/cel'
 
     export default {
         name: "login",
@@ -40,6 +42,10 @@
                 code_msg: '获取验证码',
                 timer: null
             };
+        },
+        mounted() {
+            let a = new c('你好我是配置', '我是内容');
+            a.consoleInfo()
         },
         methods: {
             submit() {
