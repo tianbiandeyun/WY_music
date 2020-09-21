@@ -1,31 +1,28 @@
 <template>
     <section class="login-container">
 
-        <!--<canvas-image ref="canvasImage" :message="message"></canvas-image>-->
+        <Button @click="btn">click me</Button>
 
-        <div class="div" ref="div">
+        <div class="div" id="div">
             <img src="../assets/images/1.jpeg" alt="">
-            <p>我是一个名字</p>
+            <p>fdsfdfds</p>
         </div>
 
-        <button @click="btn" style="position: fixed;top: 0;left: 0;z-index: 999">click me</button>
-
-        <img :src="src" style="width: 100%" alt="">
+        <img v-if="src !== ''" :src="src" style="width: 100%" alt="">
 
     </section>
 </template>
 
 <script>
-    import {Toast} from 'vant'
+    import {Toast, Button} from 'vant'
     import canvasImage from '../components/canvas_image'
-    import html2canvas from 'html2canvas'
+    import html2canvas from '../unit/ioio'
 
     export default {
         name: "login",
-        components: {canvasImage, Toast},
+        components: {canvasImage, Toast, Button},
         data() {
             return {
-                message: 'canvas',
                 src: ''
             };
         },
@@ -34,6 +31,9 @@
         },
         methods: {
             btn() {
+
+                const that = this;
+                that.src = '';
 
                 Toast.loading({
                     message: '加载中...',
@@ -46,12 +46,14 @@
                 document.documentElement.scrollTop = 0;
                 document.body.scrollTop = 0;
 
-                html2canvas(this.$refs.div, {
+                (window.html2canvas || html2canvas)(document.querySelector("#div"), {
                     allowTaint: true,
                     useCORS: true
                 }).then(canvas => {
-                    this.src = canvas.toDataURL();
+                    that.src = canvas.toDataURL("image/png");
                     Toast.clear();
+                }).catch(err => {
+                    // do sth
                 });
 
             }
@@ -67,12 +69,11 @@
 
         .div {
             font-size: 0;
-            height: 100%;
+            height: 500px;
             width: 100%;
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
-            border: 1px solid red;
             position: relative;
 
             img {
@@ -86,11 +87,17 @@
 
             p {
                 font-size: 40px;
-                color: #fff;
+                color: red;
                 position: absolute;
                 top: 100px;
                 left: 100px;
                 z-index: 11;
+            }
+
+            .header {
+                background-color: #19be6b;
+                width: 200px;
+                height: 400px;
             }
         }
     }
