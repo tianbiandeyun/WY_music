@@ -15,6 +15,10 @@ import animate from 'animate.css'
 
 Vue.use(animate);
 
+import VConsole from 'VConsole'
+
+new VConsole();
+
 new Vue({
     router,
     store,

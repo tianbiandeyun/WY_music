@@ -52,6 +52,7 @@
                         allowTaint: true,
                         useCORS: true
                     }).then(canvas => {
+                    console.log(canvas.toDataURL("image/png"));
                     that.src = canvas.toDataURL("image/png");
                     Toast.clear();
                 });
