@@ -46,14 +46,13 @@
                 document.documentElement.scrollTop = 0;
                 document.body.scrollTop = 0;
 
-                (window.html2canvas || html2canvas)(document.querySelector("#div"), {
-                    allowTaint: true,
-                    useCORS: true
-                }).then(canvas => {
+                (window.html2canvas || html2canvas)(
+                    document.querySelector("#div"), {
+                        allowTaint: true,
+                        useCORS: true
+                    }).then(canvas => {
                     that.src = canvas.toDataURL("image/png");
                     Toast.clear();
-                }).catch(err => {
-                    // do sth
                 });
 
             }
