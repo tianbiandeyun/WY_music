@@ -6,6 +6,7 @@
         <div class="div" id="div">
             <img src="../assets/images/1.jpeg" alt="">
             <p>fdsfdfds</p>
+            <div class="header"></div>
         </div>
 
         <img v-if="src !== ''" :src="src" style="width: 100%" alt="">
@@ -68,7 +69,7 @@
 
         .div {
             font-size: 0;
-            height: 500px;
+            height: 100%;
             width: 100%;
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
@@ -96,7 +97,10 @@
             .header {
                 background-color: #19be6b;
                 width: 200px;
-                height: 400px;
+                height: 200px;
+                position: absolute;
+                top: 200px;
+                left: 100px;
             }
         }
     }
