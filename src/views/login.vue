@@ -1,17 +1,17 @@
 <template>
     <section class="login-container">
 
-        <!--<Button @click="btn">click me</Button>-->
+        <Button @click="btn">click me</Button>
 
-        <!--<div class="div" id="div">-->
-        <!--<img src="../assets/images/1.jpeg" alt="">-->
-        <!--<p>fdsfdfds</p>-->
-        <!--<div class="header"></div>-->
-        <!--</div>-->
+        <div class="div" id="div">
+            <img src="../assets/images/1.jpeg" alt="">
+            <p>fdsfdfds</p>
+            <div class="header"></div>
+        </div>
 
-        <!--<img v-if="src !== ''" :src="src" style="width: 100%" alt="">-->
+        <img v-if="src !== ''" :src="src" style="width: 100%" alt="">
 
-        <HH></HH>
+        <!--<HH></HH>-->
 
     </section>
 </template>
